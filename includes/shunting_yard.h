@@ -3,10 +3,10 @@
 
 #include <iostream>
 
-#include "../../Stack and Queue Design/!includes/queue/queue.h"
-#include "../../Stack and Queue Design/!includes/stack/stack.h"
-#include "../../B+Tree/Includes/map.h"
-#include "../../../Practice/Vector Class/!includes/vector.h"
+#include "data_structures/queue.h"
+#include "data_structures/stack.h"
+#include "data_structures/map.h"
+#include "data_structures/vector.h"
 #include "operator.h"
 
 

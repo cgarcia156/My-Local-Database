@@ -1,11 +1,11 @@
 #ifndef PARSER_H_
 #define PARSER_H_
 
-#include "../../../Practice/Vector Class/!includes/vector.h"
-#include "../../B+Tree/Includes/map.h"
-#include "../../B+Tree/Includes/mmap.h"
-#include "../../String Tokenizer/!includes/stokenizer.h"
-#include "../../Stack and Queue Design/!includes/queue/queue.h"
+#include "data_structures/vector.h"
+#include "data_structures/map.h"
+#include "data_structures/mmap.h"
+#include "data_structures/queue.h"
+#include "stokenizer.h"
 
 #define ROW_SIZE 61
 #define COLUMN_SIZE 41

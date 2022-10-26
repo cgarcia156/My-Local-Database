@@ -4,9 +4,9 @@
 #include <fstream>
 #include <iostream>
 
-#include "../../../Practice/Vector Class/!includes/vector.h"
-#include "../../B+Tree/Includes/map.h"
-#include "../../B+Tree/Includes/mmap.h"
+#include "data_structures/vector.h"
+#include "data_structures/map.h"
+#include "data_structures/mmap.h"
 #include "record.h"
 
 using namespace std;

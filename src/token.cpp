@@ -6,7 +6,7 @@
  * 
  */
 
-#include "../includes/token.h"
+#include "../includes/data_structures/token.h"
 //States of acceptable token types
 enum Type {
 UNKNOWN = 0, FOREIGN = 5, SPACE = 10, ALPHA = 20, PUNCTUATION = 30, OPERATOR = 31, OPERATOR2, OPERATOR3, BRACKET, STRING = 36, NUMBER = 40, DECIMAL = 42

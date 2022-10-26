@@ -1,7 +1,7 @@
 #ifndef OPERATOR_H_
 #define OPERATOR_H_
 
-#include "../../B+Tree/Includes/map.h"
+#include "data_structures/map.h"
 
 class Operator {
  public:

@@ -4,12 +4,12 @@
 #include <iostream>
 #include <string>
 
-#include "../../Stack and Queue Design/!includes/queue/queue.h"
-#include "../../Stack and Queue Design/!includes/stack/stack.h"
-#include "../../../Practice/Vector Class/!includes/vector.h"
-#include "../../B+Tree/Includes/mmap.h"
-#include "../../B+Tree/Includes/map.h"
-#include "entity.h"
+#include "data_structures/queue.h"
+#include "data_structures/stack.h"
+#include "data_structures/vector.h"
+#include "data_structures/mmap.h"
+#include "data_structures/map.h"
+#include "data_structures/entity.h"
 #include "operator.h"
 
 

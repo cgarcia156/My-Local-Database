@@ -1,5 +1,5 @@
-#ifndef FUNCTIONS_H_
-#define FUNCTIONS_H_
+#ifndef ARRAY_UTILITY_FUNCTIONS_H_
+#define ARRAY_UTILITY_FUNCTIONS_H_
 
 #include <iostream>
 #include "vector.h"
@@ -246,4 +246,4 @@ Vector<T>& operator+=(Vector<T>& list,
 
 }  // namespace cg
 
-#endif  // FUNCTIONS_H_
+#endif  // ARRAY_UTILITY_FUNCTIONS_H_
