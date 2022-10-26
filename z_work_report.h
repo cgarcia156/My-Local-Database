@@ -40,7 +40,7 @@
                 -Uses shunting yard and rpn classes to help with 
                 conditions
 
-        -Partly implemented: 
+        -Not implemented: 
                 -No option to recover deleted records or view them
 
     Bugs     : features that are implemented are bug-free*.
