@@ -43,7 +43,7 @@
         -Partly implemented: 
                 -No option to recover deleted records or view them
 
-    Bugs     : features that are implemented are bug-free.
+    Bugs     : features that are implemented are bug-free*.
 
     Reflections:
 
@@ -57,6 +57,8 @@
 
     https://youtu.be/S2cTakG0kqw
 
+
+    * may not actually be bug-free
 */
 
 #endif // Z_WORK_REPORT_H_
