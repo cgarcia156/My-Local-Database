@@ -2,9 +2,9 @@
 #define M_MAP_TESTS_H_
 
 #include <iostream>
-#include "mmap.h"
-#include "mpair.h"
-#include "../../Sort Functions/!includes/sort_functions.h"
+#include "../includes/data_structures/mmap.h"
+#include "../includes/data_structures/map.h"
+#include "../includes/sort_functions.h"
 
 void mmap_test() {
   for (int i = 0; i < 45; ++i) {

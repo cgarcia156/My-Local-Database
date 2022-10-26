@@ -3,9 +3,9 @@
 
 #include <iostream>
 
-#include "B+Tree.h"
-#include "map.h"
-#include "../../Sort Functions/!includes/sort_functions.h"
+#include "../includes/data_structures/B+Tree.h"
+#include "../includes/data_structures/map.h"
+#include "../includes/sort_functions.h"
 
 
 void map_test() {

@@ -5,8 +5,8 @@
 #include <iostream>
 #include <random>
 
-#include "../../Sort Functions/!includes/sort_functions.h"
-#include "B+Tree.h"
+#include "../includes/sort_functions.h"
+#include "../includes/data_structures/B+Tree.h"
 
 // Important Tests
 void test_bplustree_auto(int tree_size = 5000, int how_many = 500,
