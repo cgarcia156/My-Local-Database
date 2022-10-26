@@ -4,16 +4,12 @@
 <br />
 <div align="center">
   <a href="https://github.com/cgarcia156/Database">
-    <img src="images/DB.png" alt="Logo" width="80" height="80">
+    <img src="images/DB.png" alt="Logo" width="90" height="90">
   </a>
-
+  
   <h3 align="center">Database</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/cgarcia156/Database"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/cgarcia156/Database">View Demo</a>
     ·
@@ -132,5 +128,5 @@ Project Link: [https://github.com/cgarcia156/Database](https://github.com/cgarci
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+[product-screenshot]: images/screenshot.png
 
