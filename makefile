@@ -14,13 +14,13 @@ run: main.o stokenizer.o sTable.o token.o record.o parser.o table.o sql.o rpn.o 
 main.o: src/main.cpp sql.o
 	$(CC) $(CFLAGS) -c -std=c++11 src/main.cpp
 
-stokenizer.o:
+stokenizer.o: src/stokenizer.cpp includes/stokenizer.h 
 	$(CC) $(CFLAGS) -c -std=c++11 src/stokenizer.cpp
 
-sTable.o:
+sTable.o: src/sTable.cpp includes/sTable.h
 	$(CC) $(CFLAGS) -c -std=c++11 src/sTable.cpp
 
-token.o:
+token.o: src/token.cpp includes/data_structures/token.h
 	$(CC) $(CFLAGS) -c -std=c++11 src/token.cpp
 
 record.o: src/record.cpp includes/record.h

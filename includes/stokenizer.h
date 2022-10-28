@@ -88,7 +88,6 @@ private:
     bool get_token(int &state, string& token) {
     char* temptoken = new char[MAX_BUFFER];
     char input;
-    char* success = new char[MAX_BUFFER];
     int iterator = _pos;
     state=0;
     int row = state;
@@ -103,8 +102,8 @@ private:
         return true;
     }
     //get largest acceptable token type
-    row = _table[row][_buffer[iterator]];
-    while(row>=0&&_buffer[iterator]>0) {
+    row = _table[row][(int)_buffer[iterator]];
+    while(row>=0&&(int)_buffer[iterator]>0) {
         input = _buffer[iterator];
         append(temptoken,input);
         if(_table[row][0] == 1) {
@@ -114,7 +113,7 @@ private:
           
         }
         iterator++;
-        row = _table[row][_buffer[iterator]];
+        row = _table[row][(int)_buffer[iterator]];
     }
 
     //if no tokens found, char is unknown

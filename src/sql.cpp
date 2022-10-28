@@ -1,7 +1,7 @@
 #include "../includes/sql.h"
 
 // constructor for SQL
-SQL::SQL() : p(""), _table_names("Table Names") {
+SQL::SQL() : _table_names("Table Names"), p("") {
   // Add our table of table names to tables 
   _tables["Table Names"] = _table_names;
 

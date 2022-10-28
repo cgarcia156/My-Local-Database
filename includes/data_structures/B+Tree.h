@@ -415,7 +415,6 @@ bool BPlusTree<T>::loose_remove(const T& entry) {
   const bool debug = false;
   int i = first_ge(data, data_count, entry);
   bool found = (i < data_count && data[i] == entry);
-  T found_entry;
   if (is_leaf()) {
     if (!found) {
       //[a.] nothing to do
@@ -1009,7 +1008,6 @@ typename BPlusTree<T>::Iterator BPlusTree<T>::find(const T& entry) {
 template <typename T>
 typename BPlusTree<T>::Iterator BPlusTree<T>::lower_bound(const T& key) {
   int i = first_ge(data, data_count, key);
-  bool found = (i < data_count && data[i] == key);
   if (!is_leaf()) {
     return subset[i]->lower_bound(key);
   } else {

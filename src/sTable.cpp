@@ -32,7 +32,7 @@ void mark_cells(int row, int array[MAX_ROWS][MAX_COLUMNS], int start, int end, i
 void mark_cells(int row, int array[MAX_ROWS][MAX_COLUMNS], string columns, int value) {
     for(int j=0;columns[j]!='\0';j++) {
         char temp = columns[j];
-        array[row][temp] = value;
+        array[row][(int)temp] = value;
     }
 }
 //adds a character to a c string
