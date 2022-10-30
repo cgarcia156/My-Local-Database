@@ -9,16 +9,16 @@ CFLAGS = -Wall -g
 # ********************************************
 
 run: main.o stokenizer.o sTable.o token.o record.o parser.o table.o sql.o rpn.o shunting_yard.o
-	$(CC) $(CFLAGS) -o run main.o stokenizer.o sTable.o token.o record.o parser.o table.o sql.o rpn.o shunting_yard.o
+	$(CC) $(CFLAGS) -o run main.o stokenizer.o st_table.o token.o record.o parser.o table.o sql.o rpn.o shunting_yard.o
 
 main.o: src/main.cpp sql.o
 	$(CC) $(CFLAGS) -c -std=c++11 src/main.cpp
 
-stokenizer.o: src/stokenizer.cpp includes/stokenizer.h 
+stokenizer.o: src/stokenizer.cpp includes/stokenizer.h st_table.o
 	$(CC) $(CFLAGS) -c -std=c++11 src/stokenizer.cpp
 
-sTable.o: src/sTable.cpp includes/sTable.h
-	$(CC) $(CFLAGS) -c -std=c++11 src/sTable.cpp
+st_table.o: src/st_table.cpp includes/st_table.h
+	$(CC) $(CFLAGS) -c -std=c++11 src/st_table.cpp
 
 token.o: src/token.cpp includes/data_structures/token.h
 	$(CC) $(CFLAGS) -c -std=c++11 src/token.cpp

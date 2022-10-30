@@ -5,7 +5,7 @@
  *          Also has functions to make appending easier
  */
 
-#include "../includes/sTable.h"
+#include "../includes/st_table.h"
 
 //sets every column to -1 except first column
 void init_table(int array[MAX_ROWS][MAX_COLUMNS]) {
