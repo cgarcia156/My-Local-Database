@@ -1,7 +1,7 @@
 #ifndef ENTITY_H_
 #define ENTITY_H_
 
-#include "vector.h"
+#include "data_structures/vector.h"
 
 class Entity {
  public:

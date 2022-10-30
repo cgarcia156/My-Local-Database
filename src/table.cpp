@@ -53,6 +53,18 @@ Table::Table(const string& name) {
   r.read(f, recno);
   _field_list = r.get_record();
   (f).close();
+  
+  if (_field_list.size() == 0) {
+    _field_list += "Deleted";
+    _field_list += "Name";
+
+    initialize_maps(_field_list);
+
+    open_fileW(f, _file_name.c_str());
+    Record r(_field_list);
+    r.write(f);
+    (f).close();
+  }
 
   // Init maps and reindex
   initialize_maps(_field_list);

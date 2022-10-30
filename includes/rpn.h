@@ -9,7 +9,7 @@
 #include "data_structures/vector.h"
 #include "data_structures/mmap.h"
 #include "data_structures/map.h"
-#include "data_structures/entity.h"
+#include "entity.h"
 #include "operator.h"
 
 

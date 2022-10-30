@@ -5,8 +5,8 @@
  * 
  */
 
-#ifndef S_TABLE_H_
-#define S_TABLE_H_
+#ifndef ST_TABLE_H_
+#define ST_TABLE_H_
 
 #include <iostream>
 using namespace std;
@@ -22,5 +22,5 @@ void mark_cells(int row, int array[MAX_ROWS][MAX_COLUMNS], string columns, int v
 void append(char* string, char c);
 void append(string&, char);
 
-#endif //S_TABLE_H_
+#endif //ST_TABLE_H_
 

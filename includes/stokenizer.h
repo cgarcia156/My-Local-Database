@@ -8,8 +8,8 @@
 #ifndef STOKENIZER_H_
 #define STOKENIZER_H_
 
-#include "data_structures/token.h"
-#include "sTable.h"
+#include "token.h"
+#include "st_table.h"
 
 #define MAX_ROWS 51
 #define MAX_COLUMNS 128

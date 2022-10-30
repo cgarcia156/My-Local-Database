@@ -162,7 +162,9 @@ void SQL::drop_table() {
   bool DEBUG = false;
   string table_name = pTree["table"][0];
   // check existence of table
-  if (_tables.contains(table_name)) {
+  if (table_name == "Table Names") {
+    cout << "\n\n[Table Names] Cannot Be Deleted\n\n";
+  } else if (_tables.contains(table_name)) {
     // delete the table and remove it from our records
     _tables.erase(table_name);
     _table_names.delete_where({"Name", "=", table_name});
@@ -179,7 +181,7 @@ void SQL::drop_table() {
       }
       cout << endl;
     }
-
+    
   } else {
     cout << "\n\nTable [" << table_name;
     cout << "] Not Found\n\n";
