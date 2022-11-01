@@ -126,15 +126,25 @@ void SQL::select() {
         cout << t.select_where(pTree["condition"]);
         cout << endl << endl;
       } else {
+        try {
         cout << t.select(pTree["fields"], pTree["condition"]);
         cout << endl << endl;
+        } catch(const char* e) {
+          // check for error
+          cout << "ERROR: " << e << endl << endl;
+        }
       }
     } else if (pTree["fields"][0] == "*") {
       cout << t.select_all();
       cout << endl << endl;
     } else {
+      try {
       cout << t.select(pTree["fields"]);
       cout << endl << endl;
+      } catch (const char* e) {
+        // check for error
+          cout << "ERROR: " << e << endl << endl;
+      }
     }
   } else {
     cout << "\n\nTable Not Found\n\n";
@@ -147,12 +157,16 @@ void SQL::insert() {
   // check existence of table
   if (_tables.contains(table_name)) {
     // call insert_into() from table
-    _tables[table_name].insert_into(pTree["values"]);
-    cout << "SQL::Insertion Complete\n\n";
-    if (DEBUG) {
-      cout << _tables[table_name];
-    }
-
+    try {
+      _tables[table_name].insert_into(pTree["values"]);
+      cout << "SQL::Insertion Complete\n\n";
+      if (DEBUG) {
+        cout << _tables[table_name];
+      }
+    } catch (const char* e) {
+      // check for error
+        cout << "ERROR: " << e << endl << endl;
+      }
   } else {
     cout << "\n\nTable Not Found\n\n";
   }

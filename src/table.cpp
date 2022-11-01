@@ -19,6 +19,7 @@ Table::Table(const string& name, const Vector<string> field_list, bool temp) {
   _name = name;
   _field_list += "Deleted";
   _field_list += field_list;
+
   if (temp) {
     string s = to_string(serial);
     serial++;
@@ -32,6 +33,7 @@ Table::Table(const string& name, const Vector<string> field_list, bool temp) {
 
   initialize_maps(_field_list);
 
+  // write the fields in the first record of the table
   open_fileW(f, _file_name.c_str());
   Record r(_field_list);
   r.write(f);
@@ -73,6 +75,7 @@ Table::Table(const string& name) {
 
 //---------------------Destructor-------------------------
 Table::~Table() {
+  // removes temporary files
   if (_file_name[0] == '_') {
     remove(_file_name.c_str());
   }
@@ -81,16 +84,28 @@ Table::~Table() {
 //--------------------Main Commands-----------------------
 Table Table::select(Vector<string> fields) {
   fstream f;
+  // check the fields for errors
+  if (fields.size() >= _field_list.size()) {
+    throw "Too Many Fields";
+  }
+  for (int i = 0; i < fields.size(); ++i) {
+    if (!_field_map.contains(fields[i])) {
+      throw "Field Does Not Match An Existing Field";
+    }
+  }
+  // add the "Deleted" column
   Vector<string> tfields({"Deleted"});
   tfields += fields;
   Record r(tfields);
 
+  // create a new temporary table
   Table t = Table(_name, fields, true);
 
   Vector<string> record;
 
   Vector<int> columns = get_columns(fields);
 
+  // grab and insert the correct information
   open_fileRW(f, _file_name.c_str());
   for (int i = 1; i <= _last_record; i++) {
     r.read(f, i);
@@ -106,15 +121,28 @@ Table Table::select(Vector<string> fields) {
 
 Table Table::select(Vector<string> fields, Vector<string> condition) {
   fstream f;
+  // error check the fields
+  if (fields.size() >= _field_list.size()) {
+    throw "Too Many Fields";
+  }
+  for (int i = 0; i < fields.size(); ++i) {
+    if (!_field_map.contains(fields[i])) {
+      throw "Field Does Not Match An Existing Field";
+    }
+  }
+  // add the "Deleted" column
   Vector<string> tfields({"Deleted"});
   tfields += fields;
   Record r(tfields);
+
+  // create a temporary table
   Table t = Table(_name, fields, true);
 
   Vector<long> indices = get_indices(condition, _indices);
 
   Vector<int> columns = get_columns(fields);
 
+  // insert the desired info into the new table
   open_fileRW(f, _file_name.c_str());
   for (int i = 0; i < indices.size(); ++i) {
     r.read(f, indices[i]);
@@ -127,10 +155,12 @@ Table Table::select(Vector<string> fields, Vector<string> condition) {
 Table Table::select_where(Vector<string> condition) {
   fstream f;
   Record r(_field_list);
+  // create a temporary table
   Table t = Table(_name, _field_list.ignore(0), true);
 
   Vector<long> indices = get_indices(condition, _indices);
 
+  // insert the desired records
   open_fileRW(f, _file_name.c_str());
   for (int i = 0; i < indices.size(); ++i) {
     r.read(f, indices[i]);
@@ -142,12 +172,13 @@ Table Table::select_where(Vector<string> condition) {
 
 Table Table::select_all() {
   fstream f;
+  // create a temp table
   Table t = Table(_name, _field_list.ignore(0), true);
   Vector<string> record;
   Record r(_field_list);
 
   open_fileRW(f, _file_name.c_str());
-
+  // insert all the non-deleted records
   for (int i = 1; i <= _last_record; ++i) {
     r.read(f, i);
     record = r.get_record();
@@ -164,21 +195,27 @@ Table Table::select_all() {
 
 void Table::delete_where(Vector<string> condition) {
   Vector<long> indices = get_indices(condition, _indices);
-
+  // mark each record in indices for deletion
   for (int i = 0; i < indices.size(); ++i) {
     del(indices[i]);
   }
-
+  // reindex will ignore the deleted records
   reindex();
 }
 
 void Table::insert_into(Vector<string> field_list) {
   fstream f;
+  // check for field number error
+  if (field_list.size() != _field_list.size() - 1) {
+    throw "Number Of Fields Does Not Match";
+  }
   open_fileRW(f, _file_name.c_str());
   Vector<string> fields;
+  // mark as a non-deleted record
   fields += "0";
   fields += field_list;
   Record r(fields);
+  // insert the record
   long recno = r.write(f);
   _last_record = recno;
   push_to_indices(fields, recno);
@@ -205,6 +242,7 @@ void Table::reindex() {
   open_fileRW(f, _file_name.c_str());
   r.read(f, recno);
 
+  // updates indices and ignores deleted records
   while (!f.eof()) {
     _last_record++;
     field_list = r.get_record();
@@ -233,8 +271,10 @@ void Table::del(long index) {
   Record r(_field_list);
   r.read(f, index);
   record = r.get_record();
+  // mark as deleted
   record[0] = "1";
   r = Record(record);
+  // replace existing record
   r.write(f, index);
   f.close();
 }
@@ -264,6 +304,7 @@ void Table::print(ostream& outs) const {
   open_fileRW(f, _file_name.c_str());
   long recno = 0;
   long record = 0;
+  // displays records as a table
   outs << endl
        << left << setw(16) << _name
        << "Records: " << _last_record - _num_of_deleted << endl
@@ -277,6 +318,7 @@ void Table::print(ostream& outs) const {
   recno++;
   r.read(f, recno);
   while (!(f).eof()) {
+    // ignores deleted records
     if (r.get_record()[0] != "1") {
       outs << left << setw(16) << record <<
        "|" << r << endl;
@@ -307,6 +349,7 @@ Vector<string> Table::operator[](string field) {
   Vector<string> record;
   open_fileRW(f, _file_name.c_str());
   Record r(_field_list);
+  // get all the strings in a certain column
   for (int i = 1; i <= _last_record; ++i) {
     r.read(f, i);
     record = r.get_record();
