@@ -125,7 +125,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 Christian Garcia - christiangarcia.cg77@gmail.com
 
-Project Link: [https://github.com/cgarcia156/Database](https://github.com/cgarcia156/Database)
+Project Link: [https://github.com/cgarcia156/Database](https://github.com/cgarcia156/My-Local-Database)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
