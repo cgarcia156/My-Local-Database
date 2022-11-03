@@ -28,6 +28,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#key-dependencies">Key Dependencies</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -61,14 +62,15 @@ See the specific format of commands <a href="#usage">here</a>.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Key Dependencies
+Note: This diagram ignores self-implemented data structures
+<img src="images/dependencies.png" alt="Dependencies" width="790" height="560">
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 C++
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -115,6 +117,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- CONTACT -->
