@@ -11,11 +11,11 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/cgarcia156/Database">View Demo</a>
+    <a href="https://github.com/cgarcia156/My-Local-Database">View Demo</a>
     ·
-    <a href="https://github.com/cgarcia156/Database/issues">Report Bug</a>
+    <a href="https://github.com/cgarcia156/My-Local-Database/issues">Report Bug</a>
     ·
-    <a href="https://github.com/cgarcia156/Database/issues">Request Feature</a>
+    <a href="https://github.com/cgarcia156/My-Local-Database/issues">Request Feature</a>
   </p>
 </div>
 
