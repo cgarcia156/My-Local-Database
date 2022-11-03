@@ -3,11 +3,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/cgarcia156/Database">
+  <a href="https://github.com/cgarcia156/My-Local-Database">
     <img src="images/DB.png" alt="Logo" width="90" height="90">
   </a>
   
-  <h3 align="center">Database</h3>
+  <h3 align="center">My Local Database</h3>
 
   <p align="center">
     <br />
