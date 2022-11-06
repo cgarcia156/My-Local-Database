@@ -50,7 +50,6 @@
 ## About The Project
   
 <img src="images/usmnt_example.png" alt="Example" width="600" height="270">
-<br>
 
 My Local Database stores data locally on the device's disk, with the information for each table being stored in its own binary file.
 We can interact with these tables by using commands similar to SQL (CREATE, INSERT, SELECT, DELETE, DROP). The data can be filtered 
