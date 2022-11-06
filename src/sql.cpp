@@ -224,11 +224,16 @@ void SQL::create_table() {
   string table_name = pTree["table"][0];
   // make sure table doesn't already exist
   if (!_tables.contains(table_name)) {
-    // create a new table and store its name
-    _tables[table_name] = Table(table_name, pTree["fields"]);
-    _table_names.insert_into({table_name});
-    _tables["Table Names"] = _table_names;
-    cout << "SQL::Table [" << table_name << "] has been created\n\n";
+    try {
+      // create a new table and store its name
+      _tables[table_name] = Table(table_name, pTree["fields"]);
+      _table_names.insert_into({table_name});
+      _tables["Table Names"] = _table_names;
+      cout << "SQL::Table [" << table_name << "] has been created\n\n";
+    } catch (const char* e) {
+      // check for error
+        cout << "ERROR: " << e << endl << endl;
+      }
   } else {
     cout << "\n\nTable [" << table_name;
     cout << "] Already Exists\n\n";

@@ -1,3 +1,4 @@
+#include <cstring>
 
 #include "../includes/table.h"
 #include "../includes/rpn.h"
@@ -15,6 +16,14 @@ Table::Table(const Table& RHS) {
 }
 
 Table::Table(const string& name, const Vector<string> field_list, bool temp) {
+  if (field_list.size() > 7) {
+    throw "The maximum number of fields is 7";
+  }
+  for (int i = 0; i < field_list.size(); i++) {
+    if (field_list[i].length() > 15) {
+      throw "Field names cannot be longer than 15 characters";
+    }
+  }
   fstream f;
   _name = name;
   _field_list += "Deleted";
@@ -126,7 +135,7 @@ Table Table::select(Vector<string> fields, Vector<string> condition) {
     throw "Too Many Fields";
   }
   for (int i = 0; i < fields.size(); ++i) {
-    if (!_field_map.contains(fields[i])) {
+    if (!_field_map.contains((fields[i]))) {
       throw "Field Does Not Match An Existing Field";
     }
   }
@@ -208,6 +217,11 @@ void Table::insert_into(Vector<string> field_list) {
   // check for field number error
   if (field_list.size() != _field_list.size() - 1) {
     throw "Number Of Fields Does Not Match";
+  }
+  for (int i = 0; i < field_list.size(); i++) {
+    if (field_list[i].length() > 15) {
+      throw "Values cannot be longer than 15 characters";
+    }
   }
   open_fileRW(f, _file_name.c_str());
   Vector<string> fields;
