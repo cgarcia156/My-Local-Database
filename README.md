@@ -48,9 +48,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+  
+<img src="images/usmnt_example.png" alt="Example" width="600" height="270">
 <br>
 
 My Local Database stores data locally on the device's disk, with the information for each table being stored in its own binary file.
@@ -58,7 +57,6 @@ We can interact with these tables by using commands similar to SQL (CREATE, INSE
 by selecting specific columns or by using conditions (<,>,<=,>=,=,AND,OR) when using the WHERE command along with SELECT. 
 The program is interactive, but we can also store commands in a file and run them as a batch instead of entering them in manually.
 See the specific format of commands <a href="#usage">here</a>.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
