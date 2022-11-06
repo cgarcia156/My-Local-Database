@@ -3,19 +3,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/cgarcia156/Database">
+  <a href="https://github.com/cgarcia156/My-Local-Database">
     <img src="images/DB.png" alt="Logo" width="90" height="90">
   </a>
   
-  <h3 align="center">Database</h3>
+  <h3 align="center">My Local Database</h3>
 
   <p align="center">
     <br />
-    <a href="https://github.com/cgarcia156/Database">View Demo</a>
+    <a href="https://github.com/cgarcia156/My-Local-Database">View Demo</a>
     ·
-    <a href="https://github.com/cgarcia156/Database/issues">Report Bug</a>
+    <a href="https://github.com/cgarcia156/My-Local-Database/issues">Report Bug</a>
     ·
-    <a href="https://github.com/cgarcia156/Database/issues">Request Feature</a>
+    <a href="https://github.com/cgarcia156/My-Local-Database/issues">Request Feature</a>
   </p>
 </div>
 
@@ -28,6 +28,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#key-dependencies">Key Dependencies</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -50,17 +51,26 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+<br>
+
+My Local Database stores data locally on the device's disk, with the information for each table being stored in its own binary file.
+We can interact with these tables by using commands similar to SQL (CREATE, INSERT, SELECT, DELETE, DROP). The data can be filtered 
+by selecting specific columns or by using conditions (<,>,<=,>=,=,AND,OR) when using the WHERE command along with SELECT. 
+The program is interactive, but we can also store commands in a file and run them as a batch instead of entering them in manually.
+See the specific format of commands <a href="#usage">here</a>.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Key Dependencies
+Note: This diagram ignores self-implemented data structures
+<img src="images/dependencies.png" alt="Dependencies" width="790" height="560">
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-Good Ol' C++
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+C++
 
 
 <!-- GETTING STARTED -->
@@ -109,12 +119,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
 <!-- CONTACT -->
 ## Contact
 
 Christian Garcia - christiangarcia.cg77@gmail.com
 
-Project Link: [https://github.com/cgarcia156/Database](https://github.com/cgarcia156/Database)
+Project Link: [https://github.com/cgarcia156/My-Local-Database](https://github.com/cgarcia156/My-Local-Database)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
