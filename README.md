@@ -27,19 +27,14 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#key-dependencies">Key Dependencies</a></li>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#key-dependencies">Key Dependencies</a>
+    </li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -56,12 +51,6 @@ We can interact with these tables by using commands similar to SQL (CREATE, INSE
 by selecting specific columns or by using conditions (<,>,<=,>=,=,AND,OR) when using the WHERE command along with SELECT. 
 The program is interactive, but we can also store commands in a file and run them as a batch instead of entering them in manually.
 See the specific format of commands <a href="#usage">here</a>.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Key Dependencies
-Note: This diagram ignores self-implemented data structures
-<img src="images/dependencies.png" alt="Dependencies" width="790" height="560">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,6 +101,14 @@ Note: This diagram ignores self-implemented data structures
 <li> The maximum number of fields is 7. </li>
 <li> The number of values must equal the number of fields in the table. </li>
 <li> Surrounding a variable with quotes allows for the inclusion of whitespaces and other non-alpha characters</li>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- DEPENDENCIES -->
+## Key Dependencies
+Note: This diagram ignores self-implemented data structures
+<img src="images/dependencies.png" alt="Dependencies" width="790" height="560">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
