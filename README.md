@@ -105,16 +105,27 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Command Format
+<li> create table [table_name] fields [field 1],...,[field n] </li>
+<li> insert into [table_name] values [value 1],...,[value n] </li>
+<li> drop table [table_name] </li>
+<li> select * from [table_name] (where [conditions]) </li>
+<li> select [field 1],[field 2] from [table_name] (where [conditions]) </li>
+<li> delete from [table_name] where [conditions] </li>
+<li> batch [file_name].txt </li>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Notes
+<li> Surrounding a variable with quotes allows </li>
+<li> Field names are case-sensitive. </li>
+<li> All values are compared as strings. </li>
+<li> The maximum length of any field name or value is 15 characters. </li>
+<li> The maximum number of fields is 7. </li>
+<li> The number of values must equal the number of fields in the table. </li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
