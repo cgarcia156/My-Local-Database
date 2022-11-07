@@ -95,6 +95,7 @@ Note: This diagram ignores self-implemented data structures
 ## Usage
 
 ### Command Format
+
 <li> create table [table_name] fields [field 1],...,[field n] </li>
 <li> insert into [table_name] values [value 1],...,[value n] </li>
 <li> drop table [table_name] </li>
@@ -104,12 +105,13 @@ Note: This diagram ignores self-implemented data structures
 <li> batch [file_name].txt </li>
 
 ### Notes
-<li> Surrounding a variable with quotes allows </li>
+
 <li> Field names are case-sensitive. </li>
 <li> All values are compared as strings. </li>
 <li> The maximum length of any field name or value is 15 characters. </li>
 <li> The maximum number of fields is 7. </li>
 <li> The number of values must equal the number of fields in the table. </li>
+<li> Surrounding a variable with quotes allows for the inclusion of whitespaces and other non-alpha characters</li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
