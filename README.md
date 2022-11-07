@@ -87,10 +87,6 @@ Note: This diagram ignores self-implemented data structures
   ```sh
   ./run
   ```
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
