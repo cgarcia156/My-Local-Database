@@ -43,22 +43,6 @@
         -Not implemented: 
                 -No option to recover deleted records or view them
 
-    Bugs     : features that are implemented are bug-free*.
-
-    Reflections:
-
-    This was a tough project there are still many ways I could improve the
-    database but I had limited time and hope I at least got the requirements
-    done. 
-    It includes many things we have learned throughout the semester I am glad
-    I was able to take a class with Barkeshli I learned a lot and it was fun!
-
-    Video Link:
-
-    https://youtu.be/S2cTakG0kqw
-
-
-    * may not actually be bug-free
 */
 
 #endif // Z_WORK_REPORT_H_
