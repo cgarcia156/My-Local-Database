@@ -122,5 +122,3 @@ Project Link: [https://github.com/cgarcia156/My-Local-Database](https://github.c
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[product-screenshot]: images/screenshot.png
-
